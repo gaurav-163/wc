@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Email Validation</title>
+  <script>
+    function validateEmail() {
+      var email = document.getElementById("email").value;
+
+      if (email.indexOf("@") === -1) {
+        alert("Email address must contain the '@' character. Please re-enter your email.");
+        return false;
+      }
+
+      // If the "@" character is found, the email is considered valid.
+      return true;
+    }
+  </script>
+</head>
+<body>
+  <form onsubmit="return validateEmail()">
+    <label for="email">Email Address:</label>
+    <input type="text" id="email" name="email" required><br><br>
+
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
